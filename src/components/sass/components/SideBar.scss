@@ -1,0 +1,119 @@
+.side-bar {
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+
+  &__forms {
+    display: flex;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+  }
+
+  &__dropdown {
+    flex-basis: 50%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("icons/arrow.png") right center no-repeat;
+    background-size: 2rem 1.5rem;
+    direction: rtl;
+    background-position: 10px center;
+    padding-left: 1rem;
+    //transition: all 0.2s;
+    color: white;
+    font-size: 2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      flex-basis: 97%;
+      border-top: 2px solid rgba(255, 213, 0, 0.4);
+      border-left: 2px solid rgba(255, 213, 0, 0.4);
+      border-right: 2px solid rgba(255, 213, 0, 0.4);
+      box-shadow: 0 0 6px rgba(255, 213, 0, 032);
+      outline-color: none;
+    }
+  }
+
+  &__dropdown:focus + &__search {
+    display: none;
+  }
+
+  &__dropdown-hidden {
+    display: none;
+  }
+
+  &__dropdown-options {
+    color: white;
+    background-color: black;
+    font-size: 2.5rem;
+    text-align: left;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__search {
+    flex-basis: 50%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    transition: all 0.2s;
+    padding: 1rem;
+    background: url("icons/search.png") 75% center no-repeat;
+    background-size: 2rem 2rem;
+
+    &:focus {
+      flex-basis: 97%;
+      background-color: transparent;
+      border: 2px solid rgba(255, 213, 0, 0.4);
+      box-shadow: 0 0 6px rgba(255, 213, 0, 032);
+      background: none;
+    }
+  }
+
+  &__list-item {
+    margin-left: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: inherit;
+    background: none;
+    text-align: left;
+    transition: all 0.2s;
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      border-top: 2px solid rgba(255, 213, 0, 0.4);
+      border-left: 2px solid rgba(255, 213, 0, 0.4);
+      border-bottom: 2px solid rgba(255, 213, 0, 0.4);
+      box-shadow: 0 0 6px rgba(255, 213, 0, 032);
+      transform: translateX(-3rem);
+      font-size: 2.75rem;
+      padding: 2rem 1rem;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

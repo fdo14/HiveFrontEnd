@@ -1,0 +1,42 @@
+.watch {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  &__container:hover > &__controls {
+    bottom: 5%;
+  }
+
+  &__video {
+    height: auto;
+    width: 100vw;
+    outline: none;
+    max-height: 100vh;
+  }
+
+  &__back {
+    width: 5rem;
+    height: 5rem;
+    background: url("icons/back.png") center center no-repeat;
+    background-size: 3rem 3rem;
+    position: absolute;
+    z-index: 100;
+    margin-left: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+}
